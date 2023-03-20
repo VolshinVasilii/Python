@@ -3,23 +3,23 @@
 # Пользователь вводит 2 числа. n - кол-во элементов первого множества. m - кол-во элементов второго
 # множества. Затем пользователь вводит сами элементы множеств.
 
-import random
-first_list = [random.randint(1, 10) for _ in range(10)]
-print(first_list)
-second_list = [random.randint(1, 10) for _ in range(10)]
-print(second_list)
-third_list = []
-for i in first_list:
-    for j in second_list:
-        if i == j:
-            third_list.append(i)
-            break
-third_list = list(set(third_list))
-# print(sorted(third_list)
-for i in range(len(third_list) - 1):
-    if third_list[i + 1] < third_list[i]:
-        third_list[i], third_list[i + 1] = third_list[i + 1], third_list[i]
-print(third_list)
+# import random
+# first_list = [random.randint(1, 10) for _ in range(10)]
+# print(first_list)
+# second_list = [random.randint(1, 10) for _ in range(10)]
+# print(second_list)
+# third_list = []
+# for i in first_list:
+#     for j in second_list:
+#         if i == j:
+#             third_list.append(i)
+#             break
+# third_list = list(set(third_list))
+# # print(sorted(third_list)
+# for i in range(len(third_list) - 1):
+#     if third_list[i + 1] < third_list[i]:
+#         third_list[i], third_list[i + 1] = third_list[i + 1], third_list[i]
+# print(third_list)
 
 
 # Задача 24: В фермерском хозяйстве в Карелии выращивают чернику. Она растет на круглой грядке, причем кусты высажены только по
@@ -40,7 +40,7 @@ max_sum = 0
 penultimate_sum = 0
 ultimate_sum = 0
 lenght = len(some_list)
-for i in range(len(some_list) - 3):
+for i in range(lenght - 2):
     penultimate_sum = some_list[lenght - 2] + some_list[lenght - 1] + some_list[0]
     ultimate_sum = some_list[lenght - 1] + some_list[0] + some_list[1]
     summa = some_list[i] + some_list[i + 1] + some_list[i + 2]
