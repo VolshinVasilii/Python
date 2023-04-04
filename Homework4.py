@@ -4,9 +4,9 @@
 # множества. Затем пользователь вводит сами элементы множеств.
 
 # import random
-# first_list = [random.randint(1, 10) for _ in range(10)]
+# first_list = [random.randint(1, 10) for _ in range(5)]
 # print(first_list)
-# second_list = [random.randint(1, 10) for _ in range(10)]
+# second_list = [random.randint(1, 10) for _ in range(5)]
 # print(second_list)
 # third_list = []
 # for i in first_list:
@@ -15,7 +15,7 @@
 #             third_list.append(i)
 #             break
 # third_list = list(set(third_list))
-# # print(sorted(third_list)
+# # print(sorted(third_list))
 # for i in range(len(third_list) - 1):
 #     if third_list[i + 1] < third_list[i]:
 #         third_list[i], third_list[i + 1] = third_list[i + 1], third_list[i]
