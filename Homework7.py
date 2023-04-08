@@ -9,23 +9,22 @@
 # **Ввод:** пара-ра-рам рам-пам-папам па-ра-па-да
 #     **Вывод:** Парам пам-пам
 #
-# some_list = input("Введите кричалку: ").split()
-# some_dict = {'а', 'е', 'ё', 'и', 'о', 'у', 'ы', 'э', 'ю', 'я'}
-#
-# summa = 0
-# some_set = set()
-# for i in some_list:
-#     for j in i:
-#         if j in some_dict:
-#             summa += 1
-#     some_set.add(summa)
-#     summa = 0
-#     print(len(some_set))
-#     if len(some_set) != 1:
-#         print("Пам парам")
-#         break
-# if len(some_set) == 1:
-#     print("Парам пам-пам")
+some_list = input("Введите кричалку: ").split()
+some_str = ['а', 'е', 'ё', 'и', 'о', 'у', 'ы', 'э', 'ю', 'я']
+
+summa = 0
+some_set = set()
+for i in some_list:
+    for j in i:
+        if j in some_str:
+            summa += 1
+    some_set.add(summa)
+    summa = 0
+    if len(some_set) != 1:
+        print("Пам парам")
+        break
+if len(some_set) == 1:
+    print("Парам пам-пам")
 
 # Задача 36: Напишите функцию print_operation_table(operation, num_rows=6, num_columns=6), которая принимает в качестве аргумента
 # функцию, вычисляющую элемент по номеру строки и столбца. Аргументы num_rows и num_columns указывают число строк и столбцов
@@ -37,7 +36,6 @@
 # **Ввод:** `print_operation_table(lambda x, y: x * y) `
 # **Вывод:**
 # 1 2 3 4 5 6
-#
 # 2 4 6 8 10 12
 # 3 6 9 12 15 18
 # 4 8 12 16 20 24
@@ -48,7 +46,12 @@
 # def print_operation_table(operation, num_rows, num_columns):
 #     for i in range(1, num_rows + 1):
 #         for j in range(1, num_columns + 1):
-#             print(i * j, end='\t')
+#             if i != 1 and j != 1:
+#                 print(operation(i, j), end='\t')
+#             elif i == 1:
+#                 print(j, end='\t')
+#             else:
+#                 print(i, end='\t')
 #         print()
 #
-# print_operation_table(lambda x, y: x * y, 30, 30)
+# print_operation_table(lambda x, y: x - y, 6, 6)
